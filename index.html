@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+ Peak to Peak Calculator (VPP)
+</title>
+<script type = "text/javascript">
+function calc(){
+
+var n1 = parseFloat(document.getElementById("n1").value)
+
+
+
+var op = document.getElementById("opr").value
+
+if(op === "Peak Voltage (VP)"){
+
+document.getElementById('result').value = n1*2;
+
+}
+if(op === "RMS Voltage (Vrms)"){
+
+document.getElementById('result').value = 2.828*n1;
+
+}
+if(op === "Average Voltage (Av)"){
+
+document.getElementById('result').value = 3.141*n1;
+
+}
+
+
+
+}
+
+</script>
+</head>
+<body>
+    <h1>Peak to Peak Calculator (VPP)</h1>
+<h2>This calculator shows the peak-to-peak voltage (VP-P) value from the peak voltage, RMS voltage, or average voltage.</h2>
+<h3>Inputs</h3>
+<select id = "opr">
+	<option value = "Peak Voltage (VP)">Peak Voltage (VP)</option>
+	<option value = "RMS Voltage (Vrms)">RMS Voltage (Vrms)</option>
+	<option value = "Average Voltage (Av)">Average Voltage (Av)</option>
+	
+</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" id = "n1" maxlength = "7" value = "0.0">
+Volts (V)
+<br><br>
+
+
+<input type = "Button" value = "Calculate" onclick="calc();">
+<br>
+<br>
+Output
+Voltage Peak-to-Peak (VP-P): <input type = "text" id = "result"><br><br>
+<img src="rms.jpg" alt="Simply Easy Learning" width="500"
+         height="350">
+</body>
+</html>
